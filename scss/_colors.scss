@@ -1,0 +1,26 @@
+@function color($color-name) {
+  @return map-get($map: $colors, $key: $color-name);
+}
+
+$colors: (
+  // Main Colors
+  green-main: #06c270,
+  green-darker: #05a660,
+  green-lighter: #39d98a,
+  Subtle: #e3edff,
+  // state Colors
+  error: #ff3b3b,
+  warning: #ffcc00,
+  info: #0063f7,
+  success: #06c270,
+  // Dark Colors
+  dark-1: #3a3a3c,
+  dark-2: #6b7588,
+  dark-3: #8f90a6,
+  dark-4: #c7c9d9,
+  // Light Colors
+  light-1: #dde5e9,
+  light-2: #ebebf0,
+  light-3: #f2f2f5,
+  light-4: #fafafc
+);
