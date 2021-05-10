@@ -65,6 +65,11 @@
   display: none;
 }
 @media (min-width: 840px) {
+  .header {
+    background-image: linear-gradient(black, rgba(58, 58, 60, 0.7)), url(../assets/images/background.png);
+    background-size: cover;
+    background-position: center;
+  }
   .header .nav {
     padding: 1.875rem 10rem 0 10rem;
   }
@@ -77,5 +82,101 @@
   .header .nav__menu li {
     display: block;
     font-size: 1.125 rem;
+  }
+}
+.header__intro {
+  padding: 4.6rem 1.25rem 0 1.25rem;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  background-color: #3a3a3c;
+}
+.header__intro__container {
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.header__intro h2 {
+  color: #dde5e9;
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 100%;
+}
+.header__intro .intro__line {
+  width: 2px;
+  height: 54px;
+  border-left: #06c270 solid;
+  position: absolute;
+}
+.header__intro .intro__2nd {
+  margin-left: 0.625rem;
+  color: #dde5e9;
+  line-height: 100%;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.header__intro .intro__scroll {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  position: relative;
+}
+.header__intro .intro__scroll .ilu_man {
+  height: 456px;
+  width: auto;
+}
+.header__intro .intro__scroll .scroll__text {
+  background-color: transparent;
+  color: #dde5e9;
+  position: relative;
+  text-align: right;
+  bottom: 130px;
+}
+.header__intro .intro__scroll .scroll__text .text__1 {
+  background-color: transparent;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.header__intro .intro__scroll .scroll__text .text__2 {
+  background-color: transparent;
+  text-align: left;
+  font-size: 0.875rem;
+}
+@media (min-width: 840px) {
+  .header__intro {
+    background-color: transparent;
+  }
+  .header__intro .intro__container {
+    position: absolute;
+    left: 0;
+    padding: 43.75rem 0 0 10rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .header__intro .intro__container h2 {
+    font-size: 4.25rem;
+    line-height: 10%;
+  }
+  .header__intro .intro__container .des__container {
+    display: flex;
+    align-items: baseline;
+  }
+  .header__intro .intro__container .des__container .intro__line {
+    width: 5px;
+    height: 80px;
+  }
+  .header__intro .intro__container .des__container .intro__2nd {
+    font-size: 1.2rem;
+    line-height: 50%;
+    padding-top: 20px;
+  }
+  .header__intro .intro__scroll {
+    display: none;
   }
 }/*# sourceMappingURL=styles.css.map */
