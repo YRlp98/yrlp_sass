@@ -89,39 +89,58 @@
             </div>
 
             <div class="aboutme__skills">
-                <div class="skills__container">
-                    <div class="container__title">
+                <div class="skills__card">
+                    <div class="card__title">
                         <img src="./assets/icons/flutter.svg" alt="Flutter">
                         <h2>Flutter</h2>
                     </div>
-                    <div class="container__desc">
+                    <div class="card__desc">
                         <p>2 Years of Experience</p>
                         <p>14 Projects</p>
                     </div>
                 </div>
-                <div class="skills__container">
-                    <div class="container__title">
+                <div class="skills__card">
+                    <div class="card__title">
                         <img src="./assets/icons/ui_ux.svg" alt="UI/UX Design">
                         <h2>UI/UX Design</h2>
                     </div>
-                    <div class="container__desc">
+                    <div class="card__desc">
                         <p>4 Years of Experience</p>
                         <p>20 Projects</p>
                     </div>
                 </div>
-                <div class="skills__container" id="other__skills">
-                    <p class="container__first">Dart - Git - Agile - Linux</p>
-                    <p class="container__second">SQL - Android - Java - XML</p>
-                    <p class="container__third">C# - HTML/CSS</p>
+                <div class="skills__card" id="other__skills">
+                    <p class="skills__card--first">Dart - Git - Agile - Linux</p>
+                    <p class="skills__card--second">SQL - Android - Java - XML</p>
+                    <p class="skills__card--third">C# - HTML/CSS</p>
                 </div>
             </div>
-
         </div>
         <!-- END ABOUT ME -->
+
+        <!-- PROJECTS -->
+        <div class="projects">
+            <h2 class="projects__title">My Projects.</h2>
+            <div class="projects__container">
+                <div class="projects__card" id="xtraderCard">
+                    <h3 class="projects__card--title">Xtrader</h3>
+                    <h4 class="projects__card--platform">Web, Android, iOS</h4>
+                </div>
+                <div class="projects__card active__card" id="foxholeCard">
+                    <h3 class="projects__card--title">Foxhole artillery</h3>
+                    <h4 class="projects__card--platform">Android, iOS, Windows</h4>
+                </div>
+                <div class="projects__card" id="quizappCard">
+                    <h3 class="projects__card--title">Quiz app</h3>
+                    <h4 class="projects__card--platform">Android, iOS</h4>
+                </div>
+            </div>
+            <button onclick="location.href='/'" type="button" class="projects__button">
+                All Projects
+            </button>
+        </div>
+        <!-- END PROJECTS -->
     </main>
-
-
-
 
     <script src="./index.js"></script>
 </body>

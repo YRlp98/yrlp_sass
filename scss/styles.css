@@ -219,7 +219,7 @@
   font-size: 1rem;
   padding-top: 1.25rem;
 }
-.aboutme .morethan__container {
+.aboutme .morethan__card {
   display: flexbox;
   align-content: center;
   justify-content: center;
@@ -263,7 +263,7 @@
 .aboutme__skills {
   padding-top: 50px;
 }
-.aboutme__skills .skills__container {
+.aboutme__skills .skills__card {
   background-color: #3a3a3c;
   margin-top: 50px;
   border-radius: 5px;
@@ -278,21 +278,21 @@
   cursor: pointer;
   position: relative;
 }
-.aboutme__skills .skills__container .container__title {
+.aboutme__skills .skills__card .card__title {
   display: flex;
   justify-content: center;
   align-content: center;
 }
-.aboutme__skills .skills__container .container__title img {
+.aboutme__skills .skills__card .card__title img {
   padding-right: 0.625rem;
   width: 1.875rem;
   height: auto;
 }
-.aboutme__skills .skills__container .container__title h2 {
+.aboutme__skills .skills__card .card__title h2 {
   font-size: 1.75rem;
   color: #dde5e9;
 }
-.aboutme__skills .skills__container .container__desc {
+.aboutme__skills .skills__card .card__desc {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -302,21 +302,25 @@
   color: #dde5e9;
   font-size: 0.875rem;
 }
-.aboutme__skills .skills__container:last-child {
+.aboutme__skills .skills__card:last-child {
   color: #dde5e9;
   display: flexbox;
 }
-.aboutme__skills .skills__container:last-child p {
+.aboutme__skills .skills__card:last-child p {
   margin: 5px 0 5px 0;
 }
-.aboutme__skills .skills__container:last-child .container__first {
+.aboutme__skills .skills__card:last-child .card--first {
   font-size: 1.375rem;
 }
-.aboutme__skills .skills__container:last-child .container__second {
+.aboutme__skills .skills__card:last-child .card--second {
   font-size: 1.125rem;
 }
-.aboutme__skills .skills__container:last-child .container__second {
+.aboutme__skills .skills__card:last-child .card--second {
   font-size: 0.875rem;
+}
+.aboutme__skills .skills__card:hover {
+  transition: transform 0.5s;
+  transform: scale(1.2);
 }
 @media (min-width: 840px) {
   .aboutme {
@@ -338,5 +342,128 @@
     justify-content: space-between;
     align-content: center;
     padding-top: 5rem;
+  }
+}
+
+.projects {
+  padding-top: 9.375rem;
+  background-color: #3a3a3c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.projects__title {
+  color: #dde5e9;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+}
+.projects__container {
+  padding-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.projects__container .projects__card {
+  width: 17.5rem;
+  height: 17.5rem;
+  border-radius: 5px;
+  color: #dde5e9;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  margin: 0 0.938rem 0 0.938rem;
+}
+.projects__container .projects__card--title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  visibility: hidden;
+}
+.projects__container .projects__card--platform {
+  font-size: 0.875rem;
+  font: lighter;
+  visibility: hidden;
+}
+.projects__container .active__card {
+  transform: scale(1.1);
+}
+.projects__container .active__card .projects__card--title {
+  visibility: visible;
+}
+.projects__container .active__card .projects__card--platform {
+  visibility: visible;
+}
+.projects__container .active__card:hover {
+  transition: transform 0.5s;
+  transform: scale(1.2);
+}
+.projects__container #foxholeCard {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(58, 58, 60, 0.5)), url(../assets/images/foxhole.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.projects__container #xtraderCard {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(58, 58, 60, 0.5)), url(../assets/images/xtrader.png);
+  background-size: cover;
+  background-position: center;
+}
+.projects__container #quizappCard {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(58, 58, 60, 0.5)), url(../assets/images/quizapp.png);
+  background-size: cover;
+  background-position: center;
+}
+.projects__button {
+  background-color: #06c270;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.875rem 2.375rem;
+  margin-top: 3.75rem;
+  font-size: 1.125rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0px 4px 45px 5px rgba(6, 194, 112, 0.5);
+}
+.projects__button::after {
+  content: url(../assets/icons/right_aroow.svg);
+  padding-left: 0.25rem;
+}
+.projects__button:hover {
+  box-shadow: 0px 4px 45px 15px rgba(6, 194, 112, 0.5);
+}
+@media (min-width: 840px) {
+  .projects__title {
+    font-size: 2.25rem;
+    display: inline-block;
+    position: relative;
+  }
+  .projects__title::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 25%;
+    left: -15%;
+    height: 2px;
+    width: 3.125rem;
+    background: #dde5e9;
+    z-index: 1;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  .projects__container {
+    margin: 0 10rem;
+  }
+  .projects__container .projects__card {
+    width: 23.75rem;
+    height: 23.75rem;
+    margin: 0 1.563rem;
+  }
+  .projects .projects__button {
+    align-self: flex-end;
+    margin-top: 6.25rem;
+    margin-right: 16.25rem;
   }
 }/*# sourceMappingURL=styles.css.map */
