@@ -241,6 +241,12 @@
 }
 //* END INTRO
 
+main {
+  background-color: color(dark-1);
+  position: relative;
+  overflow: hidden;
+}
+
 //* ABOUT ME
 .aboutme {
   padding: 9.375rem 1.25rem 0 1.25rem;
@@ -443,8 +449,8 @@
     justify-content: space-between;
 
     .projects__card {
-      width: 17.5rem;
-      height: 17.5rem;
+      min-width: 17.5rem;
+      min-height: 17.5rem;
       border-radius: 5px;
       color: color(light-1);
       cursor: pointer;
@@ -524,10 +530,8 @@
     margin-top: 3.75rem;
     font-size: 1.125rem;
     cursor: pointer;
-    box-sizing: border-box;
-    text-align: center;
-    display: inline-block;
     box-shadow: 0px 4px 45px 5px rgba(6, 194, 112, 0.5);
+    margin: 6.25rem auto 8.125rem auto;
 
     &::after {
       content: url(../assets/icons/right_aroow.svg);
@@ -562,20 +566,181 @@
     }
 
     &__container {
-      margin: 0 10rem;
-
       .projects__card {
         width: 23.75rem;
         height: 23.75rem;
-        margin: 0 1.563rem;
       }
-    }
-
-    .projects__button {
-      align-self: flex-end;
-      margin-top: 6.25rem;
-      margin-right: 16.25rem;
     }
   }
 }
 //* END PROJECTS
+
+//* CONTACT ME
+.contactme {
+  background-color: #252525;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+
+  &__container {
+    .contactme__socialmedia--title {
+      margin: 3.125rem 0 0 1.875rem;
+      color: color(light-1);
+      font-size: 22px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .contactme__socialmedia--container {
+      margin: 1.875rem auto 0 auto;
+      margin-left: 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+      align-items: center;
+
+      a {
+        margin: 0 0.938rem;
+        font-size: 2.25rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        text-decoration: none;
+        background-color: color(light-3);
+        color: #3a3a3c;
+        border-radius: 5px;
+        box-shadow: 0px 10px 25px 1px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+
+        &:hover {
+          background-color: color(green-main);
+          color: color(light-3);
+        }
+      }
+    }
+
+    .contactme__contact {
+      margin-top: 65px;
+      display: flex;
+      align-items: center;
+
+      &--title {
+        color: color(light-1);
+        transform: rotate(-90deg);
+        width: 3.125rem;
+        white-space: nowrap;
+        font-size: 1.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 7.5rem;
+      }
+
+      &--items {
+        margin-left: 1.25rem;
+
+        &--item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1.875rem;
+
+          a {
+            display: flex;
+            color: color(light-1);
+            text-decoration: none;
+
+            img {
+              width: 40px;
+              height: auto;
+
+              > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            div {
+              margin-left: 0.938rem;
+
+              h3 {
+                font-size: 0.875rem;
+                color: color(light-1);
+              }
+
+              p {
+                font-size: 1rem;
+                color: color(light-1);
+              }
+            }
+          }
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  .contactme__image {
+    width: 20rem;
+    height: auto;
+    margin: 2rem auto;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // Desktop view
+  @include desktop {
+    margin-left: 15rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__contact {
+      margin-left: 1.875rem;
+    }
+
+    .contactme__image {
+      width: 25rem;
+      height: auto;
+    }
+  }
+}
+//* END CONTACT ME
+
+//* FOOTER
+footer {
+  position: relative;
+  padding-top: 6.25rem;
+  padding-bottom: 3.75rem;
+  background-color: color(dark-1);
+  text-align: center;
+  color: color(light-1);
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .footer__divider {
+    margin: 6.25rem auto 2.5rem auto;
+    width: 75%;
+    height: 1px;
+    background-color: color(dark-3);
+    justify-self: center;
+  }
+
+  // Desktop view
+  @include desktop {
+    .footer__divider {
+      width: 50%;
+    }
+  }
+}
+//* END FOOTER

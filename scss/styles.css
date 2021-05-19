@@ -191,6 +191,12 @@
   }
 }
 
+main {
+  background-color: #3a3a3c;
+  position: relative;
+  overflow: hidden;
+}
+
 .aboutme {
   padding: 9.375rem 1.25rem 0 1.25rem;
   background-color: #3a3a3c;
@@ -364,8 +370,8 @@
   justify-content: space-between;
 }
 .projects__container .projects__card {
-  width: 17.5rem;
-  height: 17.5rem;
+  min-width: 17.5rem;
+  min-height: 17.5rem;
   border-radius: 5px;
   color: #dde5e9;
   cursor: pointer;
@@ -422,10 +428,8 @@
   margin-top: 3.75rem;
   font-size: 1.125rem;
   cursor: pointer;
-  box-sizing: border-box;
-  text-align: center;
-  display: inline-block;
   box-shadow: 0px 4px 45px 5px rgba(6, 194, 112, 0.5);
+  margin: 6.25rem auto 8.125rem auto;
 }
 .projects__button::after {
   content: url(../assets/icons/right_aroow.svg);
@@ -453,17 +457,152 @@
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
   }
-  .projects__container {
-    margin: 0 10rem;
-  }
   .projects__container .projects__card {
     width: 23.75rem;
     height: 23.75rem;
-    margin: 0 1.563rem;
   }
-  .projects .projects__button {
-    align-self: flex-end;
-    margin-top: 6.25rem;
-    margin-right: 16.25rem;
+}
+
+.contactme {
+  background-color: #252525;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+}
+.contactme__container .contactme__socialmedia--title {
+  margin: 3.125rem 0 0 1.875rem;
+  color: #dde5e9;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+}
+.contactme__container .contactme__socialmedia--container {
+  margin: 1.875rem auto 0 auto;
+  margin-left: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  align-items: center;
+}
+.contactme__container .contactme__socialmedia--container a {
+  margin: 0 0.938rem;
+  font-size: 2.25rem;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f2f2f5;
+  color: #3a3a3c;
+  border-radius: 5px;
+  box-shadow: 0px 10px 25px 1px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.contactme__container .contactme__socialmedia--container a:hover {
+  background-color: #06c270;
+  color: #f2f2f5;
+}
+.contactme__container .contactme__contact {
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+}
+.contactme__container .contactme__contact--title {
+  color: #dde5e9;
+  transform: rotate(-90deg);
+  width: 3.125rem;
+  white-space: nowrap;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 7.5rem;
+}
+.contactme__container .contactme__contact--items {
+  margin-left: 1.25rem;
+}
+.contactme__container .contactme__contact--items--item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.875rem;
+}
+.contactme__container .contactme__contact--items--item a {
+  display: flex;
+  color: #dde5e9;
+  text-decoration: none;
+}
+.contactme__container .contactme__contact--items--item a img {
+  width: 40px;
+  height: auto;
+}
+.contactme__container .contactme__contact--items--item a img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contactme__container .contactme__contact--items--item a div {
+  margin-left: 0.938rem;
+}
+.contactme__container .contactme__contact--items--item a div h3 {
+  font-size: 0.875rem;
+  color: #dde5e9;
+}
+.contactme__container .contactme__contact--items--item a div p {
+  font-size: 1rem;
+  color: #dde5e9;
+}
+.contactme__container .contactme__contact--items--item:hover {
+  transform: scale(1.05);
+}
+.contactme .contactme__image {
+  width: 20rem;
+  height: auto;
+  margin: 2rem auto;
+}
+.contactme .contactme__image > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 840px) {
+  .contactme {
+    margin-left: 15rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contactme__contact {
+    margin-left: 1.875rem;
+  }
+  .contactme .contactme__image {
+    width: 25rem;
+    height: auto;
+  }
+}
+
+footer {
+  position: relative;
+  padding-top: 6.25rem;
+  padding-bottom: 3.75rem;
+  background-color: #3a3a3c;
+  text-align: center;
+  color: #dde5e9;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .footer__divider {
+  margin: 6.25rem auto 2.5rem auto;
+  width: 75%;
+  height: 1px;
+  background-color: #8f90a6;
+  justify-self: center;
+}
+@media (min-width: 840px) {
+  footer .footer__divider {
+    width: 50%;
   }
 }/*# sourceMappingURL=styles.css.map */
